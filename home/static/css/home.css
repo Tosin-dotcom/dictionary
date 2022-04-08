@@ -1,0 +1,63 @@
+body {
+    margin: 0px;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+#home {
+    height: 250px;
+    text-align: center;
+    font-style: italic;
+    background-color: rgb(62, 169, 159);
+    margin: 0px;
+    padding: 10px;
+}
+
+#form {
+    max-width: 600px;
+    margin: 0px auto;
+}
+
+#id_language {
+    float: left;
+    height: 40px;
+    width: 20%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: grey;
+    border-image: initial;
+    background: rgb(241, 241, 241);
+}
+
+#id_search {
+    float: left;
+    height: 40px;
+    width: 60%;
+    border-width: 1px 1px 1px;
+    border-style: solid none solid solid;
+    border-color: grey grey grey;
+    border-image: initial;
+    border-right: none;
+    background: rgb(241, 241, 241);
+}
+
+#submit {
+    float: left;
+    color: black;
+    cursor: pointer;
+    height: 40px;
+    font-size: 16px;
+    background: rgb(241, 241, 241);
+    border-width: 1px 1px 1px;
+    border-style: solid solid solid none;
+    border-color: grey grey grey;
+    border-image: initial;
+    border-left: none;
+}
+
+#submit:hover {
+	font-size: 20px
+}

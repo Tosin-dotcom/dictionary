@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Dictionary</title>
+	</head>
+
+	<body>	
+		<h2><a href='/'>Home page</a></h2>
+		{% for i in response %}
+		
+			<h1>{{ i.word|title }}</h1>
+						
+			{% for x in i.phonetics %}
+				<h2>{{ x.text }}</h2>
+				<audio src="{{ x.audio }}" controls>
+				
+				</audio>
+			{% endfor %}
+			
+			<ol>
+			{% for j in i.meanings %}
+			
+				<h2><b>{{ j.partOfSpeech|title }}</b></h2>
+					
+					{% for z in j.definitions %}
+					
+						<li><h3>{{ z.definition }}</h3></li>
+						
+						{% if z.example %}
+							<p>Example: <i>{{ z.example }}</i></p>
+						{% endif %}
+						
+						{% if z.synonyms %}
+								<p>Synonyms: {{ z.synonyms|join:", " }}</p>
+						{% endif %}
+						
+					{% endfor %}
+					
+			{% endfor %}
+			</ol>
+			
+		{% endfor %}
+	</body>
+	
+
+</html>
+
